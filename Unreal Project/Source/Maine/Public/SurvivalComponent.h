@@ -27,29 +27,44 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TestStruct")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerSurvival")
 		FHungerSettings HungerSettings;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TestStruct")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerSurvival")
 		FThirstSettings ThirstSettings;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "TestStruct")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerSurvival")
 		FBreathSettings BreathSettings;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		float CurrentBreath;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		float CurrentBreathRatio;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		float CurrentWater;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		float CurrentThirstRatio;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		float CurrentFood;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		float CurrentHungerRation;
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Grounded")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerSurvival")
+		float CurrentBreath;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerSurvival")
+		float CurrentWater;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerSurvival")
+		float CurrentFood;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PlayerSurvival")
+		float GetBreathAdjustmentRate();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PlayerSurvival")
 		float GetBreathRatio();
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Grounded")
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void RestoreBreath(float BreathAmount);
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void SetCurrentBreath(float NewBreath);
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PlayerSurvival")
+		bool IsFullBreath();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PlayerSurvival")
 		float GetHungerRatio();
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Grounded")
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void SetCurrentFood(float NewFood);
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void AddFood(float FoodAmount);
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "PlayerSurvival")
 		float GetThirstRatio();
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void SetCurrentWater(float NewWater);
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void AddWater(float WaterAmount);
+
+
+	UFUNCTION(BlueprintCallable, Category = "PlayerSurvival")
+		void Rest(float RestDuration);
 };

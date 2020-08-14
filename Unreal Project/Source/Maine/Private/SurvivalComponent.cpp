@@ -30,26 +30,20 @@ void USurvivalComponent::BeginPlay()
 void USurvivalComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	this->CurrentBreath = 0.0f;
-	this->CurrentBreathRatio = 0.0f;
-	this->CurrentWater = 0.0f;
-	this->CurrentThirstRatio = 0.0f;
-	this->CurrentFood = 0.0f;
-	this->CurrentHungerRation = 0.0f;
+	CurrentBreath = 0.0f;
+	CurrentWater = 0.0f;
+	CurrentFood = 0.0f;
 }
 
-float USurvivalComponent::GetBreathRatio()
-{
-	float Pawn = 0.0f;
-	return Pawn;
-}
-float USurvivalComponent::GetHungerRatio()
-{
-	float Pawn = 0.0f;
-	return Pawn;
-}
-float USurvivalComponent::GetThirstRatio()
-{
-	float Pawn = 0.0f;
-	return Pawn;
-}
+float USurvivalComponent::GetBreathAdjustmentRate() { return 0.0f; }
+float USurvivalComponent::GetBreathRatio() { return 0.0f; }
+void USurvivalComponent::RestoreBreath(float BreathAmount) { }
+void USurvivalComponent::SetCurrentBreath(float NewBreath) { }
+bool USurvivalComponent::IsFullBreath() { return true; }
+float USurvivalComponent::GetHungerRatio() { return 0.0f; }
+void USurvivalComponent::SetCurrentFood(float NewFood) { }
+void USurvivalComponent::AddFood(float FoodAmount) { }
+float USurvivalComponent::GetThirstRatio() { return 0.0f; }
+void USurvivalComponent::SetCurrentWater(float NewWater) {  }
+void USurvivalComponent::AddWater(float WaterAmount) { }
+void USurvivalComponent::Rest(float RestDuration) {  }
