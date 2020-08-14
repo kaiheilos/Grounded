@@ -9,7 +9,11 @@ UStaminaComponent::UStaminaComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
+	StaminaToHungerRatio = 0.0f;
+	RegenRate = 0.0f;
+	RegenDelay = 0.0f;
+	MaxStamina = 0.0f;
+	CurrentStamina = 0.0f;
 	// ...
 }
 

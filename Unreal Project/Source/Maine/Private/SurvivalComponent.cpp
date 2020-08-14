@@ -12,7 +12,9 @@ USurvivalComponent::USurvivalComponent()
 	HungerSettings = FHungerSettings();
 	ThirstSettings = FThirstSettings();
 	BreathSettings = FBreathSettings();
-	// ...
+	CurrentBreath = 0.0f;
+	CurrentWater = 0.0f;
+	CurrentFood = 0.0f;
 }
 
 
@@ -30,9 +32,7 @@ void USurvivalComponent::BeginPlay()
 void USurvivalComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	CurrentBreath = 0.0f;
-	CurrentWater = 0.0f;
-	CurrentFood = 0.0f;
+
 }
 
 float USurvivalComponent::GetBreathAdjustmentRate() { return 0.0f; }

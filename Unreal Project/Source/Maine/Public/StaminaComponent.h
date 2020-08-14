@@ -24,5 +24,14 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SurvivalComponent")
+		float StaminaToHungerRatio;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SurvivalComponent")
+		float RegenRate;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SurvivalComponent")
+		float RegenDelay;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SurvivalComponent")
+		float MaxStamina;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SurvivalComponent")
+		float CurrentStamina;
 };
