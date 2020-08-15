@@ -34,3 +34,8 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 }
 
 float UHealthComponent::GetMaxHealth() { return 0.0f; }
+float UHealthComponent::GetCurrentHealth() { return 0.0f; }
+float UHealthComponent::GetDamageReduction() { return 0.0f; }
+float UHealthComponent::GetHealthRatio() { return 0.0f; }
+void UHealthComponent::SetCurrentDamage(float DesiredDamage) {  }
+void UHealthComponent::SetCurrentHealth(float DesiredHealth) {  }

@@ -23,6 +23,16 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "HealthComponent")
 		float GetMaxHealth();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "HealthComponent")
+		float GetCurrentHealth();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "HealthComponent")
+		float GetDamageReduction();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "HealthComponent")
+		float GetHealthRatio();
+	UFUNCTION(BlueprintCallable, Category = "HealthComponent")
+		void SetCurrentDamage(float DesiredDamage);
+	UFUNCTION(BlueprintCallable, Category = "HealthComponent")
+		void SetCurrentHealth(float DesiredHealth);
 
 protected:
 	// Called when the game starts
