@@ -5,6 +5,6 @@
 
 FHungerSettings::FHungerSettings()
 {
-	this->InitialValue = 0.0f;
-	this->AdjustmentPerSecond = 0.0f;
+	InitialValue = 0.0f;
+	AdjustmentPerSecond = 0.0f;
 }
