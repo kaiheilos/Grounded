@@ -3,15 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Engine/DataTable.h"
-#include "TableItem.generated.h"
+#include "InspectData.generated.h"
 
 /**
  * 
  */
 USTRUCT(BlueprintType)
-struct MAINE_API FTableItem : public FTableRowBase
+struct MAINE_API FInspectData
 {
-	GENERATED_USTRUCT_BODY()
-	
+	GENERATED_BODY()
+
+public:
+
+	FInspectData();
 };

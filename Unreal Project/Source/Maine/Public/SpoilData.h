@@ -3,30 +3,25 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LocString.generated.h"
+#include <ESpoilState.h>
+#include "Engine/DataTable.h"
+#include "SpoilData.generated.h"
 
 /**
  * 
  */
 USTRUCT(BlueprintType)
-struct MAINE_API FLocString
+struct MAINE_API FSpoilData
 {
-	GENERATED_USTRUCT_BODY()
-	
+	GENERATED_BODY()
+
 public:
 
-	FLocString()
-		: StringTableID(0.0f),
-		StringID(0.0f),
-		StringTableName()
-	{}
+	FSpoilData();
 
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringTableID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringID;
+		ESpoilState SpoilState;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		FName StringTableName;
-
+		FDataTableRowHandle SpoiledResultItem;
 
 };

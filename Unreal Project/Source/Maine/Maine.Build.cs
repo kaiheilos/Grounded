@@ -8,7 +8,7 @@ public class Maine : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "OEICommon" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "OEICommon", "GameplayTags" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

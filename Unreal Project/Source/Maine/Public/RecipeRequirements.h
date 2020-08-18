@@ -3,30 +3,26 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LocString.generated.h"
+#include "Engine/DataTable.h"
+#include "RecipeRequirements.generated.h"
 
 /**
  * 
  */
 USTRUCT(BlueprintType)
-struct MAINE_API FLocString
+struct  MAINE_API FRecipeRequirements
 {
 	GENERATED_USTRUCT_BODY()
-	
+
 public:
 
-	FLocString()
-		: StringTableID(0.0f),
-		StringID(0.0f),
-		StringTableName()
+	FRecipeRequirements()
+		: ItemCount(0)
 	{}
 
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringTableID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringID;
+		FDataTableRowHandle Item;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		FName StringTableName;
-
+		int ItemCount;
 
 };

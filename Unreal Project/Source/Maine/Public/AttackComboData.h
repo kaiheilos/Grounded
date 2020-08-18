@@ -3,30 +3,23 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LocString.generated.h"
+#include "Engine/DataTable.h"
+#include "AttackComboData.generated.h"
 
 /**
  * 
  */
 USTRUCT(BlueprintType)
-struct MAINE_API FLocString
+struct MAINE_API FAttackComboData
 {
 	GENERATED_USTRUCT_BODY()
-	
+
 public:
 
-	FLocString()
-		: StringTableID(0.0f),
-		StringID(0.0f),
-		StringTableName()
-	{}
+	FAttackComboData();
 
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringTableID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringID;
+		TArray<FDataTableRowHandle> Attacks;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		FName StringTableName;
-
-
+		bool bLoop;
 };

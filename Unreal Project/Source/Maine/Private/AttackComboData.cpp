@@ -1,5 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "TableItem.h"
+#include "AttackComboData.h"
 
+FAttackComboData::FAttackComboData()
+{
+}

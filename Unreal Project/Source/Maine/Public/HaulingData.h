@@ -3,30 +3,24 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "LocString.generated.h"
+#include <ESocketName.h>
+#include "HaulingData.generated.h"
 
 /**
  * 
  */
 USTRUCT(BlueprintType)
-struct MAINE_API FLocString
+struct MAINE_API FHaulingData
 {
-	GENERATED_USTRUCT_BODY()
-	
+	GENERATED_BODY()
+
 public:
 
-	FLocString()
-		: StringTableID(0.0f),
-		StringID(0.0f),
-		StringTableName()
-	{}
+	FHaulingData();
 
-		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringTableID;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		int StringID;
+		ESocketName HaulingSocket;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		FName StringTableName;
-
+		int MaxHaulCount;
 
 };
