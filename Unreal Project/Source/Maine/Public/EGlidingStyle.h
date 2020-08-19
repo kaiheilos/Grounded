@@ -12,7 +12,7 @@
 UENUM(BlueprintType)
 enum class EGlidingStyle : uint8
 {
-    ET_None     UMETA(DisplayName = "None"),
+    None     UMETA(DisplayName = "None"),
     ET_One   UMETA(DisplayName = "One"),
     ET_Two      UMETA(DisplayName = "Two"),
     ET_Three      UMETA(DisplayName = "Three"),

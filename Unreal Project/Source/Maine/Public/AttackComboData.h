@@ -12,7 +12,7 @@
 USTRUCT(BlueprintType)
 struct MAINE_API FAttackComboData
 {
-	GENERATED_USTRUCT_BODY()
+	GENERATED_BODY()
 
 public:
 

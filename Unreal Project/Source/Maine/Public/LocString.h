@@ -15,11 +15,7 @@ struct MAINE_API FLocString
 	
 public:
 
-	FLocString()
-		: StringTableID(0.0f),
-		StringID(0.0f),
-		StringTableName()
-	{}
+	FLocString();
 
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 		int StringTableID;

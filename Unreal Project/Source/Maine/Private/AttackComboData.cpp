@@ -4,5 +4,6 @@
 #include "AttackComboData.h"
 
 FAttackComboData::FAttackComboData()
+	: bLoop(false)
 {
 }

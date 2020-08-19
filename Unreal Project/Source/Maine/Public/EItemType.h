@@ -8,8 +8,8 @@
 UENUM(BlueprintType)
 enum class EItemType : uint8
 {
-    ET_None     UMETA(DisplayName = "None"),
-    ET_One   UMETA(DisplayName = "One"),
+    None     UMETA(DisplayName = "None"),
+    General   UMETA(DisplayName = "General"),
     ET_Two      UMETA(DisplayName = "Two"),
     ET_Three      UMETA(DisplayName = "Three"),
     ET_four    UMETA(DisplayName = "Four")

@@ -8,8 +8,8 @@
 UENUM(BlueprintType)
 enum class ESocketName : uint8
 {
-    ET_None     UMETA(DisplayName = "None"),
-    ET_One   UMETA(DisplayName = "One"),
+    None     UMETA(DisplayName = "None"),
+    ShoulderClose   UMETA(DisplayName = "ShoulderClose"),
     ET_Two      UMETA(DisplayName = "Two"),
     ET_Three      UMETA(DisplayName = "Three"),
     ET_four    UMETA(DisplayName = "Four")
