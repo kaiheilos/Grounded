@@ -15,6 +15,8 @@ class MAINE_API UHaulingComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UHaulingComponent();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		int Capacity;
 
 protected:
 	// Called when the game starts
