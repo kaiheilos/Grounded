@@ -1,9 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ProcessingOptions.h"
+#include "PointOfInterestDataAsset.h"
 
-FProcessingOptions::FProcessingOptions()
-{
-
-}

@@ -15,6 +15,7 @@
 #include <Maine\Public\ReactionComponent.h>
 #include <Maine\Public\StatusEffectComponent.h>
 #include <Maine\Public\TeamComponent.h>
+#include "Camera/CameraComponent.h"
 #include <OEICommon\Public\ObsidianIDComponent.h>
 #include "SurvivalCharacter.generated.h"
 
@@ -51,6 +52,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable, Category = "HealthComponent")
+		UCameraComponent* GetCurrentCamera();
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

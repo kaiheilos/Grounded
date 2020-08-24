@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ProcessingOptions.h"
+#include "SearchableKeywords.h"
 
-FProcessingOptions::FProcessingOptions()
+FSearchableKeywords::FSearchableKeywords()
 {
 
 }

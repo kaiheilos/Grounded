@@ -3,6 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ConversationReference.h"
+#include "Engine/StaticMesh.h"
+#include "Engine/SkeletalMesh.h"
 #include "InspectData.generated.h"
 
 /**
@@ -16,4 +19,16 @@ struct MAINE_API FInspectData
 public:
 
 	FInspectData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		UObject* InspectModelOverride;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		UStaticMesh* InspectStaticMeshOverride;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		USkeletalMesh* InspectSkeletalMeshOverride;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		float ModelScale;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		FConversationReference Conversation;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		int ConversationStartNode;
 };

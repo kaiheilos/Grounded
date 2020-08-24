@@ -4,17 +4,22 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "LookTrigger.generated.h"
+#include "PointOfInterestDataAsset.h"
+#include "Engine/DataAsset.h"
+#include "PointOfInterestComponent.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class MAINE_API ULookTrigger : public USceneComponent
+UCLASS(BlueprintType, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+class MAINE_API UPointOfInterestComponent : public USceneComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	ULookTrigger();
+	UPointOfInterestComponent();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Doh")
+		UPointOfInterestDataAsset* PointOfInterestData;
 
 protected:
 	// Called when the game starts

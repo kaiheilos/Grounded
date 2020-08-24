@@ -21,6 +21,7 @@
 #include <EEquipmentSlot.h>
 #include <AttackComboData.h>
 #include <AttackAmmoData.h>
+#include <SearchableKeywords.h>
 #include "BaseItemData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -33,7 +34,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 		FLocString LocalizedDisplayName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		TArray<UObject*> SearchableKeywords;
+		TArray<FSearchableKeywords> SearchableKeywords;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 		FLocString LocalizedDescription;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
@@ -93,7 +94,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 		FHaulingData HaulingData;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		TArray<UProcessingOptions*> ProcessingOptions;
+		TArray<FProcessingOptions> ProcessingOptions;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
 		UObject* ProcessingActorOverride;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")

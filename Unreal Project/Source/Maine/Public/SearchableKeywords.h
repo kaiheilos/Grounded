@@ -3,15 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ProcessingOptions.generated.h"
+#include "SearchableKeywords.generated.h"
 
 /**
  * 
  */
 USTRUCT(BlueprintType)
-struct MAINE_API FProcessingOptions
+struct MAINE_API FSearchableKeywords
 {
 	GENERATED_BODY()
+
 public:
-	FProcessingOptions();
+	FSearchableKeywords();
+	
 };

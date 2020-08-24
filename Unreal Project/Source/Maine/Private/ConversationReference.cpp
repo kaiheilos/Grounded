@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ProcessingOptions.h"
+#include "ConversationReference.h"
 
-FProcessingOptions::FProcessingOptions()
+FConversationReference::FConversationReference()
 {
 
 }

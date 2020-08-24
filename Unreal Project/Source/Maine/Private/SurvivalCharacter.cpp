@@ -40,3 +40,4 @@ void ASurvivalCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 }
 
+UCameraComponent* ASurvivalCharacter::GetCurrentCamera() { return NewObject<UCameraComponent>(); }
