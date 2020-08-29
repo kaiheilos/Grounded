@@ -4,20 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include <Runtime\Engine\Classes\Engine\DataTable.h>
-#include "TeamComponent.generated.h"
+#include "ProceduralAnimationComponent.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class MAINE_API UTeamComponent : public UActorComponent
+class MAINE_API UProceduralAnimationComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UTeamComponent();
+	UProceduralAnimationComponent();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
-		FDataTableRowHandle TeamDataTable;
+		USceneComponent* AttachParent;
 
 protected:
 	// Called when the game starts

@@ -9,7 +9,9 @@ UBuildingPlacementComponent::UBuildingPlacementComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
+	ValidSlotScore = 0.0f;
+	GroundSnapDistance = 0;
+	FreeBuildingPlacementDistance = 0.0f;
 	// ...
 }
 

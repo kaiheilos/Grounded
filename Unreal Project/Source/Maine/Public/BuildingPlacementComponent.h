@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include <Maine\Public\Building.h>
 #include "BuildingPlacementComponent.generated.h"
 
 
@@ -15,6 +16,14 @@ class MAINE_API UBuildingPlacementComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UBuildingPlacementComponent();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		float ValidSlotScore;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		int GroundSnapDistance;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		float FreeBuildingPlacementDistance;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+		ABuilding* PendingBuilding;
 
 protected:
 	// Called when the game starts
